@@ -10,9 +10,9 @@ dc.leafletChart = function (_chart) {
     var _defaultZoom = false;
 
     var _tiles = function (map) {
-      /* L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/traffic-day-v2/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYW1hZG91MTciLCJhIjoib3NhRnROQSJ9.lW0PVXVIS-j8dGaULTyupg', {
+       L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/traffic-day-v2/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYW1hZG91MTciLCJhIjoib3NhRnROQSJ9.lW0PVXVIS-j8dGaULTyupg', {
         attribution: '<a href="http://mapbox.com">Mapbox</a>'
-    }).addTo(map);*/ 
+    }).addTo(map);
     };
 
 
@@ -602,11 +602,11 @@ dc.leafletChoroplethChart = function (parent, chartGroup) {
     var _renderPopup = true;
     var _brushOn = true;
     var _featureOptions = {
-        'fillColor': 'white',
-        'color': 'black',
-        'opacity':1,
+        'fillColor': 'grey',
+        'color': 'grey',
+        'opacity':0,
         'fillOpacity': 0,
-        'weight': 2
+        'weight': 0
     };
 
     var _featureKey = function (feature) {
@@ -629,22 +629,22 @@ dc.leafletChoroplethChart = function (parent, chartGroup) {
                 if (isSelectedGeo(v.d)) {
                     options.fillColor = _chart.getColor(v.d.value, v.i);
                     options.opacity = 1;
-                    options.fillOpacity = 0.8;
+                    options.fillOpacity = 0.5;
                     options.color = 'white';
-                    options.weight = 2;                                                 
+                    options.weight = 1;                                                 
                 } else {
                     options.fillColor = _chart.getColor(0, v.i);
                     options.opacity = 1;
-                    options.fillOpacity = 0.8;
+                    options.fillOpacity = 0.5;
                     options.color = 'white';
-                    options.weight = 2;                                                      
+                    options.weight = 1;                                                      
                 }
             } else {
                 options.fillColor = _chart.getColor(v.d.value, v.i);
                 options.opacity = 1;
-                options.fillOpacity = 0.8;
+                options.fillOpacity = 0.5;
                 options.color = 'white';
-                options.weight = 2;                                   
+                options.weight = 1;                                   
             }           
         }
         return options;
@@ -670,7 +670,7 @@ dc.leafletChoroplethChart = function (parent, chartGroup) {
             };
 
         _info.update = function (name) {
-                this._div.innerHTML = (name ? name: 'Hover for name');
+                this._div.innerHTML = (name ? name: '<b>'+'Hover for name'+'</b>');
             };
 
         _info.addTo(_chart.map());

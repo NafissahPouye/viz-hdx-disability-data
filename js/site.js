@@ -19,14 +19,14 @@ dc.dataCount('#count-info')
        .center([0,0])
        .zoom(0)
        .geojson(vargeodata)
-       .colors(['#cce0f0','#99c1e1', '#66a1d1', '#3382c2', '#0063b3'])
+       .colors(['#99c1e1','#cce0f0', '#66a1d1', '#3382c2', '#003b6b'])
        .colorDomain([0,4])
        .colorAccessor(function (d){
         var c = 0
            if (d>6) {
                  c = 4;
                } else if (d>3) {
-                    c = 3;
+                    c = 2;
                } else if (d>0){
                   c = 1;
               
@@ -65,8 +65,8 @@ dc.dataCount('#count-info')
       }
     map.keyboard.disable();
     
- Winheight = $(window).height();
-     $("#MapInform").css("background-color","#FFFFFF");
+/* Winheight = $(window).height();
+     $("#MapInform").css("background-color","#FFFFFF");*/
      
       function genLookup(geojson) {
         var lookup = {} ;
