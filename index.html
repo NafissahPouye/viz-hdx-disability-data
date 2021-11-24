@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title> Disability Data on HDX</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" ype="text/css" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/dc.css"/>
+        <link rel="stylesheet" type="text/css" href="css/leaflet.css"/>
+        <link rel="stylesheet" type="text/css" href="css/site.css"/>
+        <link rel="stylesheet" type="text/css" href="css/loader.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/d3.min.js"></script>
+        <script src="js/crossfilter.v1.min.js"></script>
+        <script src="js/dc.min.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/dc.leaflet.js"></script>     
+    </head>
+    <body>
+      <div class="container" id='main'>
+        <div class='content'> 
+          <div class='container'>
+              <div class="row">
+          <div class="col-md-12">
+          <h4 class="header"><center><h3>Disability Data on HDX</h3></center></h4>
+          </div>
+        </div>
+            <div class="row" style="padding-top: 10px;">
+              
+                <div class="row" style="margin-left: 125px;">
+                    <div class="col-md-4"; style = "font-size:20px";><b><font color="#1bb580">474</font></b> datasets on disability </div>
+                    <div class="col-md-4"; style = "font-size:20px"> <b><font color="#1bb580">29</font> </b>subnational datasets </div>
+                    <div class="col-md-4"; style = "font-size:20px"><b><font color="#1bb580">21</font></b> sources</div>
+                   
+                </div> <br>
+            </div>
+              <div class='loader'>
+        <div class="sp sp-circle"></div>
+        
+      </div>
+        <div id="header" class="row"></div>
+        <div class="row">
+            <div class="col-md-12" ></div>
+            <a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset All</a> 
+            </div>
+         <div class="row"> 
+                <div class="col-md-12" id="MapInform"></div>
+                
+        </div>
+        <div class="col-md-12" style="overflow: auto">
+            
+            <div id="note"><i><small>The boundaries and names shown and the designations used on this map do not imply official endorsement or acceptance by the United Nations.</small></i></div>
+            <!-- </div> -->
+        <!-- fin du row des data tables -->
+        </div> <br>
+        <div class="container-fluid">
+
+        <footer class="footer">
+          <div class='logos'>
+                <a href='https://www.unocha.org' target='_blank'>
+                  <img height='30' src='img/logo-ocha-gray.png'>
+                </a>
+                <a href='https://centre.humdata.org' target='_blank'>
+                  <img height='38' src='img/logo-centre-gray.png'>
+                </a>
+          </div>
+        </footer>
+
+      </div> <!-
+        <!-- fin container -->
+        </div>
+
+        </div>
+        <script src="js/bootstrap.min.js"></script>
+      <script src="js/site.js"></script>
+          </div>
+    </body>
+</html>
